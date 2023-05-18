@@ -92,7 +92,7 @@ bienestarTemporadas unaSerie
 bienestarActores :: Serie -> Int
 bienestarActores unaSerie
     | (length $ actores unaSerie) < 10 = 3
-    | otherwise                      = 10 - (cantidadDeRestricciones 2 unaSerie)  
+    | otherwise                        = 10 - (cantidadDeRestricciones 2 unaSerie)  
 
 --------------
 -- Punto 04 --
@@ -104,7 +104,7 @@ productorMasEfectivo series productores = map (masDinero productores) series
 masDinero :: [Produccion] -> Serie -> Serie
 masDinero (x:[]) unaSerie = x unaSerie
 masDinero (x:xs) unaSerie
-    | bienestarSerie (x unaSerie) > bienestarSerie (head xs & unaSerie) = x unaSerie
+    | bienestarSerie (x unaSerie) > bienestarSerie (head xs $ unaSerie) = x unaSerie
     | otherwise                                                         = masDinero xs unaSerie
 
 --------------
