@@ -111,3 +111,19 @@ masDinero (x:xs) unaSerie
 -- Punto 05 --
 --------------
 
+-- a)
+-- Si, se puede usar, el problema es que cuando lo intentemos mostrar la lista infinita de actores por consola
+-- nunca va a corta, por lo que no cumple con el proposito de la funcion
+
+-- b)
+-- Si hacemos drop 2 no va a haber problema, el problema esta si se quiere agregar los elementos al final de la lista
+-- Como es una lista infinita esto nunca va a ser posible 
+-- Por lo que depende de si agregamos a los actores al principio o al final
+
+--------------
+-- Punto 06 --
+--------------
+
+-- funcionLoca x y = filter (even.x) . map (length.y) 
+
+-- funcionLoca :: (Int -> Int) -> (a -> [b]) -> [a] -> [Int]
